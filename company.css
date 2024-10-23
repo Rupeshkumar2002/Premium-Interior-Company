@@ -1,0 +1,308 @@
+h1{
+    background-color: rgb(132, 138, 242);
+    /* text-align: center; */
+    padding-left: 30px;
+    color: rgb(255, 251, 32);
+    text-shadow: #474444;
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+}
+
+.slides img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(8, 8, 8);
+    font-size: 24px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    color: white;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* About Us */
+#about {
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(114, 202, 231);
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+#services{
+background-color: rgba(255, 239, 134, 0.815);
+}
+
+/* Services Carousel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure that items stack on smaller screens */
+}
+
+.carousel-item {
+    flex: 1;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.carousel-item i {
+    font-size: 48px;
+    color: #555;
+}
+
+.carousel-prev, .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: -22px;
+    font-size: 18px;
+}
+
+.carousel-prev {
+    left: 0;
+}
+
+.carousel-next {
+    right: 0;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin: 50px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    flex-basis: calc(33.33% - 20px); /* Make three items per row */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Contact Form */
+form {
+    width: 80%; /* Adjusted for smaller screens */
+    max-width: 600px; /* Ensures form is not too wide */
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Responsive Design - Mobile Styles */
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Slideshow */
+    .slides img {
+        height: auto;
+    }
+
+    /* About Us Section */
+    #about {
+        padding: 30px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    /* Services Carousel */
+    .carousel-item {
+        margin: 10px 0;
+        flex-basis: 100%;
+    }
+
+    .carousel-prev, .carousel-next {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    /* Gallery */
+    .gallery-item {
+        flex-basis: calc(50% - 20px); /* Two items per row on tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Adjustments for small mobile screens */
+
+    .text {
+        font-size: 16px;
+    }
+
+    /* Slideshow images */
+    .slides img {
+        height: 250px;
+    }
+
+    /* About Us Section */
+    #about p {
+        font-size: 14px;
+    }
+
+    /* Services Carousel */
+    .carousel-item {
+        flex-basis: 100%;
+    }
+
+    /* Gallery */
+    .gallery-item {
+        flex-basis: 100%; /* One item per row on mobile */
+    }
+   
+
+    /* Contact Form */
+    form {
+        width: 95%;
+    }
+}
+footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.media{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+   
+}
+

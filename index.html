@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Interiors Company</title>
+    <link rel="stylesheet" href="./company.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Premium Interiors Company <sup>&reg;</sup></h1>
+
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section (Slideshow) -->
+    <section id="home">
+        <div class="slideshow-container">
+            <div class="slides fade">
+                <img src="./office.jpeg" alt="Interior Design 1">
+                <div class="text" style="color: black; font-size:x-large;">Modern Living Room Design</div>
+            </div>
+            <div class="slides fade">
+                <img src="./Restuarent1.jpeg" alt="Interior Design 2">
+                <div class="text"  style="color: black; font-size:x-large; ">Restaurant Design</div>
+            </div>
+            <div class="slides fade">
+                <img src="./bedRoom.webp" alt="Interior Design 3">
+                <div class="text" style="color: black; font-size:x-large; ">Luxury Office Design</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Premium Interiors Company specializes in luxury interior designs. We create spaces that are functional, beautiful, and inspiring. Our team of expert designers will bring your vision to life with style and elegance.</p>
+    </section>
+
+    <!-- Services Section (Carousel Slider) -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Interior Design</h3>
+                    <p>Transform your space with our unique interior design services.</p>
+                </div>
+                <div class="carousel-item">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Renovation</h3>
+                    <p>We provide top-notch renovation services to upgrade your space.</p>
+                </div>
+                <div class="carousel-item">
+                    <i class="fas fa-couch"></i>
+                    <h3>Furniture Selection</h3>
+                    <p>Choose from a wide selection of premium furniture to suit your style.</p>
+                </div>
+            </div>
+            <button class="carousel-prev" onclick="carouselPrev()">&#10094;</button>
+            <button class="carousel-next" onclick="carouselNext()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section id="projects">
+        <h2>Our Projects</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="./floor1.avif" alt="Project 1">
+                <div class="overlay">
+                    <div class="text" style="color: black;">Luxury Living Room</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./floor2.jpeg" alt="Project 2">
+                <div class="overlay">
+                    <div class="text">Modern Office Space</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./floor4.jpeg" alt="Project 3">
+                <div class="overlay">
+                    <div class="text">Elegant Dining Room</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" style="background-color:   rgb(252, 161, 57); padding: 20px;">
+        <h2>Contact Us</h2>
+        <form >
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <br>
+    <footer>
+        <p>@ 2024 Premium Interiors Company.All rights reserved.</p>
+        <div class="media">
+            <a href="#">
+                <i class="fab fa-facebook" style="height: 50px; width: 30px; color: #fff;"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter" style="height: 50px; width: 30px; color: #fff;"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram" style="height: 50px; width: 30px; color: #fff;"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./company.js"></script>
+</body>
+</html>
